@@ -34,8 +34,8 @@ public class loginController {
 	}
 
 	@RequestMapping("/updateUser")
-	public ModelAndView updateUser(String password) {
-		int updateUserPassword = userService.updateUserPassword("赖金川", password);
+	public ModelAndView updateUser(User user) {
+		int updateUserPassword = userService.updateUserPassword("赖金川", user.getPassword());
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("isSuccess", updateUserPassword);
 		modelAndView.setViewName("view/updateSuccess");

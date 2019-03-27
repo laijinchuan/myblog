@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery测试</title>
+<script type="text/javascript" src="jquery-3.1.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		alert("数据"+$("#div1").text() )
+		
+	});
+});
+
+</script>
+</head>
+<body>
+	<h1 id="div1">这是什么</h1>
+	<button>测试</button>
+</body>
+</html>

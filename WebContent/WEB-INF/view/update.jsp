@@ -6,9 +6,10 @@
 %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户显示</title>
-<script type="text/javascript" src="<%=contextPath %>/view/jquery-3.3.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+ <script type="text/javascript" src="../static/jquery/jquery-3.1.1.js"></script>
 <script type="text/javascript">
 	 $(document).ready(function(){
 		$("button").click(function(){
@@ -24,8 +25,8 @@
 </script>
 </head>
 <body>
-<input value="${userList.username} "/>
-<input type="text" id="password">
+<input value="${userList.username}  disabled="true" name="user.password"/>
+<input type="text" id="password" name="user.username">
 <a href="${pageContext.request.contextPath}/view/updateUser.action">提交</a>
 <button>提交</button>
 </body>
